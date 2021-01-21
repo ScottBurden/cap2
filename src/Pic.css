@@ -1,0 +1,32 @@
+.Pic {
+    /* display: inline-block; */
+    width: 150px;
+    background-color: lightgray;
+    /* background-color: rosybrown; */
+    border-radius: 15px;
+    padding: .1em;
+    margin: .1em;
+}
+
+.Selected {
+        width: 150px;
+        /* background-color: lightgray; */
+        background-color: rosybrown;
+        border-radius: 15px;
+        padding: .1em;
+        margin: .1em;
+        opacity: .4;
+}
+
+.MuiSvgIcon-root {
+    margin-right: -25px;
+}
+
+/* .Pic:hover { 
+    width: 300px;
+} 
+*/
+
+.Pics {
+    display: inline-block;
+}
