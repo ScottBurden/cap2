@@ -4,7 +4,6 @@ Users can register to upload photos of their choosing to the site, then see them
 
 ### Built with React, React-DOM, Node and PostgresQL with several APIs:
 
-**API list:**
 - [AWS S3](https://aws.amazon.com/s3/)
 - [MaterialUI](https://material-ui.com/)
 - [Context](https://reactjs.org/docs/context.html) 
