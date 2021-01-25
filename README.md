@@ -7,6 +7,6 @@ Users can register to upload photos of their choosing to the site, then see them
 **API list:**
 - [AWS S3](https://aws.amazon.com/s3/)
 - [MaterialUI](https://material-ui.com/)
-- [reactjs Context](https://reactjs.org/docs/context.html) 
+- [Context](https://reactjs.org/docs/context.html) 
 
 Capstone project 2
