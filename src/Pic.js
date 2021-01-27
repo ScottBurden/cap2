@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import './Pic.css';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import SECRET_URL from "./secret"
-//import Check from "./AddCheck"
 
 // function isFavorite(pic) {
 //   let favPics = new Set();
@@ -12,16 +11,10 @@ import SECRET_URL from "./secret"
 
 const Pic = (prop) => {
   const [check, isChecked] = useState("no");
-  //let imgChk = true ? <CheckCircleIcon /> : "";
-
-  // $(".pic").on("click", function(e) {
-  //   const target = e.target;
-  //   $(target).toggleClass("chk")
-  // })
+  //TODO select pictures based on "check" state to pass down with isFavorite()
 
   return (
-      <div className="Pics">
-        {/* <span onClick= {() => check === "no" ? isChecked("yes") : isChecked("no")}> */}
+      <div className="AllPics">
         { check === "yes" ? <CheckCircleIcon /> : null } 
           <img 
             onClick= {() => check === "no" ? isChecked("yes") : isChecked("no")} 
@@ -30,7 +23,6 @@ const Pic = (prop) => {
             alt="BeautifulAngel" 
             >
          </img>
-        {/* </span> */}
       </div>
   );
 }

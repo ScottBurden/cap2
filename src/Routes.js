@@ -1,20 +1,18 @@
 import Bride from "./Bride";
+import Home from "./Home";
 import PicGrid from "./PicGrid";
-import HomePage from "./HomePage";
 import React from "react";
 import Card from "./PicCard";
 import { Switch, Route } from "react-router-dom";
-//import PicList from "./PicList";
 
 
 function Routes() {
   return (
     <Switch>
       <Route exact path="/">
-        <HomePage />
+        <Home />
       </Route>
       <Route exact path="/bride">
-        {/* <PicList /> */}
         <Bride />
       </Route>
       <Route exact path="/grid">
@@ -23,7 +21,6 @@ function Routes() {
       <Route exact path="/card">
         <Card />
       </Route>
-      <Route></Route>
     </Switch>
   );
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-// import "./NavBar.css"
 import "./App.css"
 
 
@@ -27,14 +26,19 @@ function NavBar() {
           <li className="nav-item">
             <NavLink className="nav-link" to="/card">Card</NavLink>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <NavLink className="nav-link" to="/people">People</NavLink>
           </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/list">List</NavLink> 
+          </li> */}
         </ul>
       </div>
     </nav>
   );
 }
 
+
+export default NavBar
 
 export default NavBar

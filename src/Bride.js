@@ -1,16 +1,9 @@
 import React from 'react';
 import Pic from './Pic';
 import SECRET_URL from "./secret"
-//import { Link } from "react-router-dom";
-//import { useSelector, useDispatch } from 'react-redux';
-//import Check from "./AddCheck"
-
-//import { resetAll } from "./actions/reset";
 
 
 function Bride({pics}) {
-    // () => {
-        // let imgChk = true ? <CheckCircleIcon /> : "";}
 
   return (
     <div>
@@ -25,7 +18,7 @@ function Bride({pics}) {
   );
 }
 
-
+//for dev purposes, before connecting db with API
 Bride.defaultProps = {
   pics: [
     {id:1, img:"1"},

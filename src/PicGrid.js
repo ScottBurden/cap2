@@ -3,7 +3,6 @@ import SECRET_URL from "./secret";
 import { makeStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
-// import tileData from './tileData';
 
 
 const tileData = [

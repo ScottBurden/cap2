@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
@@ -17,7 +17,6 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "70%",
   },
   media: {
-    // width: "auto",
     width: "50%",
     paddingTop: '56.25%', // 16:9
   },
@@ -31,14 +30,21 @@ const useStyles = makeStyles((theme) => ({
   expandOpen: {
     transform: 'rotate(180deg)',
   },
-//   avatar: {
-//     backgroundColor: red[500],
-//   },
 }));
 
 export default function RecipeReviewCard() {
   const classes = useStyles();
-  const [expanded, setExpanded] = React.useState(false);
+  const [expanded, setExpanded] = useState(false);
+  const INITIAL_STATE = [
+    {id:1},
+    {id:2},
+    {id:3},
+    // {id:4},
+    {id:5},
+    {id:6},
+    {id:7}
+  ]
+  const [items] = useState(INITIAL_STATE);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -48,16 +54,6 @@ export default function RecipeReviewCard() {
     <Card className={classes.root}>
         
       <CardHeader
-        // avatar={
-        //   <Avatar aria-label="recipe" className={classes.avatar}>
-        //     R
-        //   </Avatar>
-        // }
-        // action={
-        //   <IconButton aria-label="settings">
-        //     <MoreVertIcon />
-        //   </IconButton>
-        // }
         title="Before the ceremony"
         subheader="January 19, 2019"
       />
@@ -84,55 +80,20 @@ export default function RecipeReviewCard() {
         </IconButton>
       </CardActions>
       </CardContent>
-      {/* <CardActions disableSpacing>
-        <IconButton
-          className={clsx(classes.expand, {
-            [classes.expandOpen]: expanded,
-          })}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </IconButton>
-      </CardActions> */}
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-        <CardMedia
-        className={classes.media}
-        image={`${SECRET_URL}2.jpg`}
-        title="Sitting"
-        />
 
-        {/* //Possibly have labels for photos? */}
-        <Typography variant="body1" color="textPrimary" component="p">
-          This is a label for a pictures
-        </Typography>
+        {/* Possibly have labels for photos? */}
+        {/* <Typography variant="body1" color="textPrimary" component="p">
+          This is a label for a picture
+        </Typography> */}
+        { items.map(item => 
         <CardMedia
         className={classes.media}
-        image={`${SECRET_URL}5.jpg`}
-        title="Sit"
-         />
-         <CardMedia
-        className={classes.media}
-        image={`${SECRET_URL}3.jpg`}
-        title="Sittin"
-        />
-        <CardMedia
-        className={classes.media}
-        image={`${SECRET_URL}6.jpg`}
+        image={`${SECRET_URL}${item.id}.jpg`}
         title="Sitting"
-        />
-        <CardMedia
-        className={classes.media}
-        image={`${SECRET_URL}7.jpg`}
-        title="Sit"
          />
-         <CardMedia
-        className={classes.media}
-        image={`${SECRET_URL}1.jpg`}
-        title="Sittin"
-        />
+        )}
         </CardContent>
       </Collapse>
     </Card>
